@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'yellow',
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: 30,
@@ -11,7 +11,7 @@ export default StyleSheet.create({
   logo: {
     fontSize: 48,
     fontWeight: 'bold',
-    color: '#6A0DAD', // tom de roxo
+    color: 'green', // tom de verde
     marginBottom: 10,
   },
   welcomeText: {
@@ -21,6 +21,7 @@ export default StyleSheet.create({
   },
   inputContainer: {
     flexDirection: 'row',
+    backgroundColor: '#fff',
     alignItems: 'center',
     borderWidth: 1,
     borderColor: '#ccc',
@@ -36,10 +37,10 @@ export default StyleSheet.create({
   input: {
     flex: 1,
     fontSize: 16,
-    color: '#333',
+    color: '#fff',
   },
   button: {
-    backgroundColor: '#6A0DAD',
+    backgroundColor: 'green',
     borderRadius: 8,
     paddingVertical: 12,
     paddingHorizontal: 20,
@@ -57,7 +58,7 @@ export default StyleSheet.create({
     color: '#666',
   },
   linkText: {
-    color: '#6A0DAD',
+    color: 'green',
     fontWeight: 'bold',
   },
 });

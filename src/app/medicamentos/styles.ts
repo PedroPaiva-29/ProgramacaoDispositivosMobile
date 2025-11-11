@@ -4,7 +4,7 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'yellow',
     alignItems: 'center',
     paddingTop: 60,
     paddingHorizontal: 20,
@@ -12,7 +12,7 @@ export default StyleSheet.create({
   title: {
     fontSize: 26,
     fontWeight: 'bold',
-    color: '#6A0DAD',
+    color: 'green',
     marginBottom: 5,
   },
   subtitle: {
@@ -67,13 +67,13 @@ export default StyleSheet.create({
   input: {
     width: '100%',
     height: 50,
-    backgroundColor: '#f3e8ff',
+    backgroundColor: '#fff',
     borderRadius: 10,
     paddingHorizontal: 15,
     fontSize: 16,
     color: '#333',
     borderWidth: 1,
-    borderColor: '#e0b0ff',
+    borderColor: 'black',
   },
   timePickerButton: {
     width: '100%',
@@ -98,7 +98,21 @@ export default StyleSheet.create({
   submitButton: {
     width: '100%',
     height: 55,
-    backgroundColor: '#6A0DAD',
+    backgroundColor: 'green',
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 20,
+    elevation: 4,
+    shadowColor: '#000',
+    shadowOpacity: 0.2,
+    shadowRadius: 6,
+    shadowOffset: { width: 0, height: 3 },
+  },
+  submitButtonV: {
+    width: '150%',
+    height: 55,
+    backgroundColor: 'green',
     borderRadius: 12,
     alignItems: 'center',
     justifyContent: 'center',

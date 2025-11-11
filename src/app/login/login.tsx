@@ -15,17 +15,17 @@ export default function Login() {
   return (
     <View style={styles.container}>
       {/* Header */}
-      <Text style={styles.logo}>CEUB</Text>
+      <Text style={styles.logo}>Formosa Fit</Text>
 
       {/* Welcome Message */}
-      <Text style={styles.welcomeText}>Bem vindo ao Ceub!</Text>
+      <Text style={styles.welcomeText}>Bem vindo ao Formosa Fit!</Text>
 
       {/* Email Input */}
       <View style={styles.inputContainer}>
         <Ionicons name="mail-outline" size={20} color="#777" style={styles.icon} />
         <TextInput
           style={styles.input}
-          placeholder="ENDEREÇO E-MAIL"
+          placeholder="E-MAIL"
           placeholderTextColor="#999"
           value={email}
           onChangeText={setEmail}

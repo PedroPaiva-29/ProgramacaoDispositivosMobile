@@ -6,14 +6,15 @@ export default function Layout(){
         <Stack
         screenOptions={{
             headerStyle:{
-                backgroundColor:'#6A0DAD'
+                backgroundColor:'green'
             },
             headerTintColor: '#fff'
         }}
         >
             <Stack.Screen name="index" options={{title:"Inicial"}}/>
             <Stack.Screen name="medicamentos/cadastro" options={{title:"Cadastro"}}/>
-            <Stack.Screen name="medicamentos/listar" options={{title:"Listagem"}}/>
+            <Stack.Screen name="medicamentos/listar" options={{title:"Treinos Cadastrados"}}/>
+            <Stack.Screen name="login/login" options={{title:"Login"}}/>
         </Stack>
     );
 }

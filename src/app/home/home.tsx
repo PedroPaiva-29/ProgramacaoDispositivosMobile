@@ -8,21 +8,21 @@ export default function Home() {
  return(
 
      <View style={styles.container}>
-      <Text style={styles.title}>Bem-vindo, Ceub 👋</Text>
+      <Text style={styles.title}>Formosa Fit </Text>
       <Text style={styles.subtitle}>Escolha uma opção abaixo:</Text>
       <View style={styles.menuContainer}>
 
         <Link href="/medicamentos/cadastro" asChild>
           <TouchableOpacity style={styles.menuItem}>
-            <Ionicons name={"add-circle-outline"} size={34} color="#6A0DAD" /> 
-            <Text style={styles.menuLabel}>{"Cadastrar Medicamento"}</Text>
+            <Ionicons name={"add-circle-outline"} size={34} color="green" /> 
+            <Text style={styles.menuLabel}>{"Criar novo treino"}</Text>
           </TouchableOpacity>
         </Link>
 
         <Link href="/medicamentos/listar" asChild>
           <TouchableOpacity style={styles.menuItem}>
-            <Ionicons name={"list-outline"} size={34} color="#6A0DAD" /> 
-            <Text style={styles.menuLabel}>Meus Medicamentos</Text>
+            <Ionicons name={"list-outline"} size={34} color="green" /> 
+            <Text style={styles.menuLabel}>Meus treinos</Text>
           </TouchableOpacity>
         </Link>
 

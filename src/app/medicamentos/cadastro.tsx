@@ -61,14 +61,14 @@ const MedicationForm = () => {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <Text style={styles.title}>Cadastrar Medicamento</Text>
-      <Text style={styles.subtitle}>Preencha os detalhes para agendar seu medicamento.</Text>
+      <Text style={styles.title}>Cadastrar treino</Text>
+      <Text style={styles.subtitle}>Preencha os detalhes do seu treino:</Text>
 
       <View style={styles.formGroup}>
-        <Text style={styles.label}>Nome do Medicamento</Text>
+        <Text style={styles.label}>Nome do treino</Text>
         <TextInput
           style={styles.input}
-          placeholder="Ex: Ibuprofeno"
+          placeholder="Ex: Superior Completo"
           value={medicationName}
           onChangeText={setMedicationName}
           autoCapitalize="words"
@@ -76,52 +76,41 @@ const MedicationForm = () => {
       </View>
 
       <View style={styles.formGroup}>
-        <Text style={styles.label}>Dosagem</Text>
+        <Text style={styles.label}>Nome do exercício</Text>
         <TextInput
           style={styles.input}
-          placeholder="Ex: 200mg, 1 comprimido"
+          placeholder="Ex: Supino com halters"
           value={dosage}
           onChangeText={setDosage}
         />
       </View>
 
       <View style={styles.formGroup}>
-        <Text style={styles.label}>Frequência</Text>
+        <Text style={styles.label}>Séries e repetições</Text>
         <TextInput
           style={styles.input}
-          placeholder="Ex: 8 em 8 horas, 1 vez ao dia"
+          placeholder="Ex: 3 x 12"
           value={frequency}
           onChangeText={setFrequency}
         />
       </View>
 
       <View style={styles.formGroup}>
-        <Text style={styles.label}>Horário</Text>
-        <TouchableOpacity onPress={showTimePickerModal} style={styles.timePickerButton}>
-          <Text style={styles.timePickerButtonText}>Selecionar Horário</Text>
-        </TouchableOpacity>
-        <Text style={styles.selectedTimeText}>
-          Horário selecionado: {selectedTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-        </Text>
-
-        {showTimePicker && (
-          <DateTimePicker
-            testID="dateTimePicker"
-            value={selectedTime}
-            mode="time"
-            is24Hour={true}
-            display="default"
-            onChange={onChangeTime}
-          />
-        )}
+        <Text style={styles.label}>Hórario do treino</Text>
+        <TextInput
+          style={styles.input}
+          placeholder="Ex: 14h00"
+          value={frequency}
+          onChangeText={setFrequency}
+        />
       </View>
 
       <TouchableOpacity onPress={handleSubmit} style={styles.submitButton}>
-        <Text style={styles.submitButtonText}>Salvar Medicamento</Text>
+        <Text style={styles.submitButtonText}>Salvar treino</Text>
       </TouchableOpacity>
 
       <Link href={'/'} as>
-        <TouchableOpacity style={styles.submitButton}>
+        <TouchableOpacity style={styles.submitButtonV}>
         <Text style={styles.submitButtonText}>Voltar</Text>
       </TouchableOpacity>
       </Link>

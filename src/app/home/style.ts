@@ -4,7 +4,7 @@ import { StyleSheet } from 'react-native';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'yellow',
     alignItems: 'center',
     paddingTop: 60,
     paddingHorizontal: 20,
@@ -12,7 +12,7 @@ export default StyleSheet.create({
   title: {
     fontSize: 26,
     fontWeight: 'bold',
-    color: '#6A0DAD',
+    color: 'green',
     marginBottom: 5,
   },
   subtitle: {
@@ -30,7 +30,7 @@ export default StyleSheet.create({
   menuItem: {
     width: '40%',
     height: 120,
-    backgroundColor: '#f3e8ff',
+    backgroundColor: 'lightgreen',
     borderRadius: 14,
     alignItems: 'center',
     justifyContent: 'center',
@@ -50,7 +50,7 @@ export default StyleSheet.create({
   },
   linkText: {
     marginTop: 25,
-    color: '#6A0DAD',
+    color: 'green',
     fontWeight: 'bold',
   },
   // NOVOS ESTILOS PARA O FORMULÁRIO
