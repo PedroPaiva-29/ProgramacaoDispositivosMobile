@@ -37,7 +37,6 @@ export default StyleSheet.create({
   input: {
     flex: 1,
     fontSize: 16,
-    color: '#fff',
   },
   button: {
     backgroundColor: 'green',

@@ -14,11 +14,12 @@ import styles from './styles'; // Ajuste o caminho se seu styles.js estiver em o
 import { Link } from 'expo-router';
 
 const MedicationForm = () => {
-  const [medicationName, setMedicationName] = useState('');
-  const [dosage, setDosage] = useState('');
+  const [trainingName, setTrainingName] = useState('');
+  const [exercice, setExercice] = useState('');
   const [frequency, setFrequency] = useState('');
   const [selectedTime, setSelectedTime] = useState(new Date());
   const [showTimePicker, setShowTimePicker] = useState(false);
+  const [hour, setHour] = useState('');
 
   const onChangeTime = (event, chosenTime) => {
     const currentTime = chosenTime || selectedTime;
@@ -31,7 +32,7 @@ const MedicationForm = () => {
   };
 
   const handleSubmit = () => {
-    if (!medicationName || !dosage || !frequency) {
+    if (!trainingName || !exercice || !frequency) {
       Alert.alert('Campos obrigatórios', 'Por favor, preencha todos os campos.');
       return;
     }
@@ -39,24 +40,25 @@ const MedicationForm = () => {
     const formattedTime = selectedTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
     const formData = {
-      medicationName,
-      dosage,
+      trainingName,
+      exercice,
       frequency,
       time: formattedTime,
     };
 
-    console.log('Dados do Medicamento:', formData);
-    Alert.alert('Sucesso!', `Medicamento ${medicationName} agendado para ${formattedTime}.`);
+    console.log('Dados do Treino:', formData);
+    Alert.alert('Sucesso!', `Treino ${trainingName} agendado para ${formattedTime}.`);
 
     // Aqui você enviaria os dados para um backend, um estado global, ou armazenamento local
     // Por exemplo:
-    // saveMedication(formData);
+    // saveExercice(formData);
 
     // Limpar o formulário após o envio
-    setMedicationName('');
-    setDosage('');
+    setTrainingName('');
+    setExercice('');
     setFrequency('');
     setSelectedTime(new Date());
+    setHour('');
   };
 
   return (
@@ -69,8 +71,8 @@ const MedicationForm = () => {
         <TextInput
           style={styles.input}
           placeholder="Ex: Superior Completo"
-          value={medicationName}
-          onChangeText={setMedicationName}
+          value={trainingName}
+          onChangeText={setTrainingName}
           autoCapitalize="words"
         />
       </View>
@@ -80,8 +82,8 @@ const MedicationForm = () => {
         <TextInput
           style={styles.input}
           placeholder="Ex: Supino com halters"
-          value={dosage}
-          onChangeText={setDosage}
+          value={exercice}
+          onChangeText={setExercice}
         />
       </View>
 
@@ -100,8 +102,8 @@ const MedicationForm = () => {
         <TextInput
           style={styles.input}
           placeholder="Ex: 14h00"
-          value={frequency}
-          onChangeText={setFrequency}
+          value={hour}
+          onChangeText={setHour}
         />
       </View>
 
@@ -109,7 +111,7 @@ const MedicationForm = () => {
         <Text style={styles.submitButtonText}>Salvar treino</Text>
       </TouchableOpacity>
 
-      <Link href={'/'} as>
+      <Link href={''}>
         <TouchableOpacity style={styles.submitButtonV}>
         <Text style={styles.submitButtonText}>Voltar</Text>
       </TouchableOpacity>

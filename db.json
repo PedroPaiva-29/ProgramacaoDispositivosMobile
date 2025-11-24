@@ -1,0 +1,11 @@
+{
+    "medicamentos":[
+        {
+            "id": 1,
+            "nome": "Supino inclinado",
+            "serie": "3x12",
+            "horario": "14:00"
+        }
+    ]
+
+}
